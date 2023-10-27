@@ -1,0 +1,31 @@
+{
+  "name": "gulp-webp-css",
+  "version": "1.1.0",
+  "description": "replace background image to webp if supports",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "seokirill"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "css": "^2.2.1",
+    "gulp-util": "^3.0.7",
+    "through2": "^2.0.1"
+  },
+  "repository": {
+    "url": "git://github.com/seokirill/gulp-webp-css.git"
+  },
+  "readme": "# gulp-webp-css\n\n## Example\n```css\n// Input\n.banner{\n    background: url(/img/bannerbg.jpg) no-repeat center;\n}\n\n// Output\n.banner{\n    background: url(/img/bannerbg.jpg) no-repeat center;\n}\n@supports (-webkit-appearance:none){\n    .banner {\n        background-image: url(/img/bannerbg.webp);\n    }\n}\n```\n## Install\n```bash\nnpm i --save-dev gulp-webp-css\n```\n## Usage\n```javascript\nvar webpCss = require('gulp-webp-css');\n\ngulp.task('css', function () {\n    gulp.src('./assets/css/*.css')\n        .pipe(webpCss()) // or .pipe(webpCss(['.jpg','.jpeg']))\n        .pipe(gulp.dest('./public/css/'))\n});\n```\n",
+  "readmeFilename": "README.md",
+  "gitHead": "cfb5bc6821bd6e182906a1a34e0f26c53c2d15ca",
+  "bugs": {
+    "url": "https://github.com/seokirill/gulp-webp-css/issues"
+  },
+  "homepage": "https://github.com/seokirill/gulp-webp-css#readme",
+  "_id": "gulp-webp-css@1.0.2",
+  "_shasum": "013141a105d0a1b9183f8e93ac7a15dd8040217d",
+  "_from": "gulp-webp-css@*"
+}

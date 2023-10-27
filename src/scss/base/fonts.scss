@@ -1,0 +1,20 @@
+//Підключення шрифту
+// @font-face {
+// 	font-family: 'Roboto';
+// 	src: url('../../fonts/Roboto-Medium.woff2') format('woff2'),
+// 		url('../../fonts/Roboto-Medium.woff') format('woff');
+// 	font-weight: 500;
+// 	font-style: normal;
+// }
+
+// 100 - thin
+// 300 - lite
+// 400 - normal,regular
+// 500 - medium
+// 600 - semibold
+// 700 - bold
+// 900 - black
+
+// Підключення через міксин
+
+// @include font('Roboto', 'Roboto-Regular', 400, normal);
