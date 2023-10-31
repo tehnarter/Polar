@@ -3,7 +3,7 @@ const gulp = require('gulp')
 // HTML
 const fileInclude = require('gulp-file-include')
 const htmlclean = require('gulp-htmlclean')
-const webpHTML = require('gulp-webp-html')
+// const webpHTML = require('gulp-webp-html')
 const panini = require('panini')
 
 // SASS
@@ -11,7 +11,7 @@ const sass = require('gulp-sass')(require('sass'))
 const sassGlob = require('gulp-sass-glob')
 const autoprefixer = require('gulp-autoprefixer')
 const csso = require('gulp-csso')
-const webpCss = require('gulp-webp-css')
+// const webpCss = require('gulp-webp-css')
 
 const browserSync = require('browser-sync')
 const clean = require('gulp-clean')
@@ -56,33 +56,37 @@ const setPanini = {
 	data: 'src/html/data',
 }
 gulp.task('html:build', function () {
-	return gulp
-		.src([
-			'./src/html/**/*.html',
-			'!./src/html/layouts/*.html',
-			'!./src/html/blocks/*.html',
-		])
-		.pipe(changed('./build/'))
-		.pipe(panini(setPanini))
-		.pipe(plumber(plumberNotify('HTML')))
-		.pipe(fileInclude(fileIncludeSetting))
-		.pipe(webpHTML())
-		.pipe(htmlclean())
-		.pipe(gulp.dest('./build/'))
+	return (
+		gulp
+			.src([
+				'./src/html/**/*.html',
+				'!./src/html/layouts/*.html',
+				'!./src/html/blocks/*.html',
+			])
+			.pipe(changed('./build/'))
+			.pipe(panini(setPanini))
+			.pipe(plumber(plumberNotify('HTML')))
+			// .pipe(webpHTML())
+			.pipe(fileInclude(fileIncludeSetting))
+			.pipe(htmlclean())
+			.pipe(gulp.dest('./build/'))
+	)
 })
 
 gulp.task('sass:build', function () {
-	return gulp
-		.src('./src/scss/*.scss')
-		.pipe(changed('./build/css/'))
-		.pipe(plumber(plumberNotify('SCSS')))
-		.pipe(webpCss())
-		.pipe(sassGlob())
-		.pipe(autoprefixer())
-		.pipe(groupMedia())
-		.pipe(sass())
-		.pipe(csso())
-		.pipe(gulp.dest('./build/css/'))
+	return (
+		gulp
+			.src('./src/scss/*.scss')
+			.pipe(changed('./build/css/'))
+			.pipe(plumber(plumberNotify('SCSS')))
+			// .pipe(webpCss())
+			.pipe(sassGlob())
+			.pipe(autoprefixer())
+			.pipe(groupMedia())
+			.pipe(sass())
+			.pipe(csso())
+			.pipe(gulp.dest('./build/css/'))
+	)
 })
 gulp.task('images:build', function () {
 	return gulp

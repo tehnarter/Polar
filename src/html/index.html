@@ -1,9 +1,141 @@
 ---
-title: Template
+title: Polar
 ---
 
 <div class="wrapper">
 	@@include('blocks/header.html')
-	<main class="main"></main>
+	<main class="main">
+		<div class="main__container">
+			<div class="main__block-1 block-1">
+				<div class="block-1__row">
+					<div class="block-1__ice">
+						<div class="block-1__subtitle">Sweet fun, full of milk.</div>
+						<div class="block-1__title">
+							Feel inside cold with our delicious <span>ice-cream.</span>
+						</div>
+						<div class="block-1__text">
+							Some food has looked so awful that it's looked like something that
+							the dog's brought home, yet after one mouthful I've been left
+							eating my thoughts, my words.
+						</div>
+						@@include('blocks/button.html',{"name": "Buy Now"})
+					</div>
+					<img class="block-1__img" src="../img/block-1.jpg" alt="" />
+				</div>
+			</div>
+			<div class="main__block-2 block-2">
+				<div class="block-2__row">
+					<div class="block-2__cards">
+						<img class="block-2__icon" src="../img/Icon_1.svg" alt="" />
+						<div class="block-2__title">Free Shipping</div>
+						<div class="block-2__text">
+							Last Chance! Free shipping on all orders ends today.
+						</div>
+					</div>
+					<div class="block-2__cards">
+						<img class="block-2__icon" src="../img/Icon_2.svg" alt="" />
+						<div class="block-2__title">Quick Packaging</div>
+						<div class="block-2__text">
+							Last Chance! Free shipping on all orders ends today.
+						</div>
+					</div>
+					<div class="block-2__cards">
+						<img class="block-2__icon" src="../img/cash-back.svg" alt="" />
+						<div class="block-2__title">100% Money Back</div>
+						<div class="block-2__text">
+							Last Chance! Free shipping on all orders ends today.
+						</div>
+					</div>
+					<div class="block-2__cards">
+						<img class="block-2__icon" src="../img/fast-delivery.svg" alt="" />
+						<div class="block-2__title">Fast Delivery</div>
+						<div class="block-2__text">
+							Last Chance! Free shipping on all orders ends today.
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main__block-3 block-3">
+				<div class="block-3__row">
+					<div class="block-3__broun">
+						<div class="block-3__title">Brown Sugar Oatmea</div>
+						<div class="block-3__text">
+							Together with McDonald’s, Burger King has grown to become
+							synonymous with burgers in the US.Together with McDonald’s, Burger
+							King has grown to become synonymous.
+						</div>
+						@@include('blocks/button.html',{"name": "See Details"})
+					</div>
+					<img src="../img/block-3.jpg" alt="" class="block-3__img" />
+				</div>
+			</div>
+			<div class="main__block-4 block-4">
+				<div class="block-4__title">Our Product</div>
+				<div class="block-4__nav">
+					<ul class="block-4__list">
+						<li><a href="#"></a>ICE CREAM</li>
+						<li><a href="#"></a>CAYENNE CHOCOLATE</li>
+						<li><a href="#"></a>CAKE BATTER</li>
+						<li><a href="#"></a>CANDY CANE</li>
+						<li><a href="#"></a>PLATTERS</li>
+						<li><a href="#"></a>DESSERT</li>
+					</ul>
+				</div>
+				<div class="block-4__row">
+					<div class="block-4__card-row cards-row">
+						<img src="../img/block-4_1.jpg" alt="" class="cards-row__img" />
+						<div class="cards-row__card product">
+							<div class="product__title">Brown bread</div>
+							<div class="product__text">
+								Bon Au Pain is a pioneer in the healthy fast food scene.Bon Au
+								Pain is a pioneer in the healthy fast food scene.Bon Au Pain is
+								a pioneer in the healthy fast food scene.
+							</div>
+							<div class="product__cena">$19.55 <span>$22.55</span></div>
+							@@include('blocks/button.html',{"name": "Buy Now"})
+						</div>
+					</div>
+					<div class="block-4__card-row cards-row cards-row-revers">
+						<img src="../img/block-4_2.jpg" alt="" class="cards-row__img" />
+						<div class="cards-row__card product">
+							<div class="product__title">Cayenne chocolate</div>
+							<div class="product__text">
+								Bon Au Pain is a pioneer in the healthy fast food scene.Bon Au
+								Pain is a pioneer in the healthy fast food scene.Bon Au Pain is
+								a pioneer in the healthy fast food scene.
+							</div>
+							<div class="product__cena">$19.55 <span>$22.55</span></div>
+							@@include('blocks/button.html',{"name": "Buy Now"})
+						</div>
+					</div>
+					<div class="block-4__card-row cards-row">
+						<img src="../img/block-4_3.jpg" alt="" class="cards-row__img" />
+						<div class="cards-row__card product">
+							<div class="product__title">Sweet corn</div>
+							<div class="product__text">
+								Bon Au Pain is a pioneer in the healthy fast food scene.Bon Au
+								Pain is a pioneer in the healthy fast food scene.Bon Au Pain is
+								a pioneer in the healthy fast food scene.
+							</div>
+							<div class="product__cena">$19.55 <span>$22.55</span></div>
+							@@include('blocks/button.html',{"name": "Buy Now"})
+						</div>
+					</div>
+					<div class="block-4__card-row cards-row cards-row-revers">
+						<img src="../img/block-4_4.jpg" alt="" class="cards-row__img" />
+						<div class="cards-row__card product">
+							<div class="product__avtor"></div>
+							<div class="product__text">
+								Thanks a lot for the prompt service. Really appreciate.
+								Excellence taste in Every Bite.Add a joy of best Taste. Foodie
+								Moments.
+							</div>
+							<div class="product__slider"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
 	@@include('blocks/footer.html')
 </div>

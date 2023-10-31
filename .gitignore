@@ -1,0 +1,57 @@
+# Ігнорувати файли та папки, створені системою операційної системи
+.DS_Store
+Thumbs.db
+
+# Ігнорувати файли локального розгортання розробки
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Ігнорувати файли налаштувань та локальний файл оточення
+.env
+.env.local
+.env.*.local
+
+# Ігнорувати файли змінних середовища
+.env.production
+.env.development
+
+# Ігнорувати файли збірки та вихідні файли виробника
+/build/
+/dev/
+
+# Ігнорувати файли, які генеруються системами збірки
+*.log
+*.log.*
+*.db
+*.sqlite
+*.sqlite3
+*.swp
+.DS_Store
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+yarn-error.log
+
+# Ігнорувати файли, які генеруються редакторами коду
+.idea/
+.vscode/
+
+# Ігнорувати файли конфігурації редакторів
+.editorconfig
+.eslintrc
+.prettier
+
+# Ігнорувати файли налаштувань та тимчасові файли проекту
+.project
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# Ігнорувати файли, що починаються на "temp_"
+temp_*
+
+# Інші тимчасові файли та файли з налаштуваннями
+*.log
+*.swp

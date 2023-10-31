@@ -12,6 +12,15 @@
 		list-style: none;
 		display: flex;
 		justify-content: space-between;
+		a {
+			color: #150101;
+			font-family: Roboto;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			opacity: 0.6;
+		}
 	}
 }
 
@@ -30,8 +39,7 @@
 		z-index: 50;
 		overflow-y: auto;
 		padding: 50px 40px;
-		background-color: rgb(37, 16, 228);
-		color: #fff;
+		background-color: rgb(242, 242, 247);
 		animation: burgerAnimation 0.4s;
 
 		&__list {

@@ -1,0 +1,315 @@
+.main {
+	// .main__block-1
+
+	&__block-1 {
+	}
+}
+.block-1 {
+	&__row {
+		display: flex;
+		margin: 0px 0px 93px 0px;
+	}
+	&__ice {
+		display: flex;
+		flex: 0 0 60%;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	// .block-1__subtitle
+
+	&__subtitle {
+		margin: 0px 0px 6px 0px;
+		color: #0f0101;
+		font-family: Roboto;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: normal;
+		letter-spacing: 1.4px;
+	}
+
+	// .block-1__title
+
+	&__title {
+		margin: 0px 0px 35px 0px;
+		color: #0f0101;
+		font-family: Fredoka;
+		font-size: 57.33px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 120.5%; /* 69.083px */
+		span {
+			opacity: 0.9;
+			color: #d23166;
+			font-family: Fredoka;
+			font-size: 57.33px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 120.5%;
+		}
+	}
+
+	// .block-1__text
+
+	&__text {
+		margin: 0px 0px 50px 0px;
+		color: #0f0101;
+		font-family: Hind Madurai;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 27px; /* 150% */
+	}
+
+	// .block-1__button
+
+	// .block-1__img
+
+	&__img {
+		flex: 0 1 40%;
+		width: 100%;
+	}
+}
+// block-2
+.main {
+	// .main__block-2
+
+	&__block-2 {
+	}
+}
+.block-2 {
+	// .block-2__row
+
+	&__row {
+		display: flex;
+		margin: 0px -17.5px 0px -17.5px;
+	}
+
+	// .block-2__cards
+
+	&__cards {
+		margin: 0px 17.5px 28px 17.5px;
+		padding: 33px 26px 28px 26px;
+		flex: 0 1 25%;
+		text-align: center;
+	}
+
+	// .block-2__icon
+
+	&__icon {
+		margin: 0px 0px 23px 0px;
+	}
+
+	// .block-2__title
+
+	&__title {
+		color: #000;
+		font-family: Hind Madurai;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: normal;
+	}
+
+	// .block-2__text
+
+	&__text {
+		color: #000;
+		text-align: center;
+		font-family: Hind Madurai;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+	}
+}
+
+// block-3
+
+.main {
+	// .main__block-3
+
+	&__block-3 {
+	}
+}
+.block-3 {
+	// .block-3__row
+	margin: 0px 0px 137px 0px;
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	// .block-3__broun
+
+	&__broun {
+		flex: 0 1 50%;
+		max-width: 442px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	// .block-3__title
+
+	&__title {
+		margin: 0px 0px 16px 0px;
+		color: #150101;
+		font-family: Hind Madurai;
+		font-size: 44.2px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 110.5%; /* 48.841px */
+	}
+
+	// .block-3__text
+
+	&__text {
+		margin: 0px 0px 30px 0px;
+		color: #150101;
+		font-family: Roboto;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 24px; /* 150% */
+	}
+
+	// .block-3__img
+
+	&__img {
+		flex: 0 1 50%;
+	}
+}
+// block-4
+
+.main {
+	// .main__block-4
+
+	&__block-4 {
+	}
+}
+.block-4 {
+	// .block-4__title
+
+	&__title {
+		margin: 0px 0px 64px 0px;
+		text-align: center;
+		color: #150101;
+		font-family: Hind Madurai;
+		font-size: 44.2px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: normal;
+	}
+
+	// .block-4__nav
+
+	&__nav {
+		margin: 0px 0px 50px 0px;
+	}
+
+	// .block-4__list
+
+	&__list {
+		display: flex;
+		justify-content: space-evenly;
+		li {
+			color: #000;
+			font-family: Roboto;
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: normal;
+			opacity: 0.6;
+		}
+	}
+
+	// .block-4__row
+
+	&__row {
+		display: flex;
+		flex-direction: column;
+		row-gap: 35px;
+	}
+
+	// .block-4__card-row
+
+	&__card-row {
+		display: flex;
+	}
+}
+.cards-row-revers {
+	flex-direction: row-reverse;
+	.product {
+		align-items: flex-end;
+	}
+}
+.cards-row {
+	// .cards-row__img
+
+	&__img {
+		flex: 0 1 50%;
+	}
+
+	// .cards-row__card
+
+	&__card {
+		flex: 0 1 50%;
+		padding: 0px 87px 0px 87px;
+	}
+}
+.product {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	// .product__title
+
+	&__title {
+		margin: 0px 0px 11px 0px;
+		color: #000;
+		font-family: Hind Madurai;
+		font-size: 26px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+	}
+
+	// .product__text
+
+	&__text {
+		margin: 0px 0px 28px 0px;
+		color: #000;
+		font-family: Roboto;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 24px; /* 150% */
+	}
+
+	// .product__cena
+
+	&__cena {
+		margin: 0px 0px 31px 0px;
+		color: #000;
+		font-family: Hind Madurai;
+		font-size: 26px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: normal;
+		span {
+			opacity: 0.7;
+		}
+	}
+
+	// .product__avtor
+
+	&__avtor {
+	}
+
+	// .product__slider
+
+	&__slider {
+	}
+}
