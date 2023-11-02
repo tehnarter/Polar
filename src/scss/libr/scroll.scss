@@ -1,0 +1,18 @@
+.hidden {
+	display: none !important;
+}
+.scroll__btn {
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+	width: 50px;
+	height: 60px;
+	background: transparent;
+	color: rgb(3, 36, 165);
+	font-size: 30px;
+	line-height: 1;
+	background-color: rgba(140, 182, 142, 0.445);
+	border-radius: 50%;
+	z-index: 10;
+	transform: rotate(-90deg);
+}

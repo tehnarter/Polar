@@ -1,0 +1,126 @@
+.slider {
+	max-width: 400px;
+	overflow: hidden;
+	margin: 0 20px;
+}
+
+.slider__line {
+	display: flex;
+	align-items: center;
+	transition: all 1s;
+}
+
+.slider__btn-prev {
+}
+
+.slider__btn-next {
+}
+
+.slider__wrapper {
+	max-width: 400px;
+	margin: 30px 0px 0px 0px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	column-gap: 10px;
+}
+
+.slider__dot {
+	img {
+		border-radius: 50%;
+	}
+	&.active-dot {
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		border: 1px solid #d64374;
+		img {
+			width: 100%;
+		}
+	}
+}
+.slider__dot:hover {
+	border-radius: 50%;
+	border: 1px solid #6343d6;
+}
+
+// @media (max-width: 850px) {
+// 	.slider__btn-next img,
+// 	.slider__btn-prev img {
+// 		width: calc(20px + (50 - 20) * ((100vw - 320px) / (850 - 320)));
+
+/* 50 - макс. ширина, которая нам нужна;
+            20, 20px - мин. ширина, которая нам нужна;
+            100vw - полная ширина экрана;
+            320, 320px - мин. разрешение до которого будет уменьш. наше свойство;
+            850 - разрешение экрана, с которого начинает ужиматься наш slider; */
+// }
+
+// 	.slider__dot {
+// 		width: calc(10px + (16 - 10) * ((100vw - 320px) / (850 - 320)));
+// 		height: calc(10px + (16 - 10) * ((100vw - 320px) / (850 - 320)));
+// 	}
+
+// 	.slider__wrapper {
+// 		column-gap: calc(5px + (10 - 5) * ((100vw - 320px) / (850 - 320)));
+// 	}
+// }
+.slide {
+}
+.slide-content {
+	&__autor {
+		display: flex;
+		column-gap: 21px;
+		margin: 0px 0px 46px 0px;
+	}
+
+	// .slide-content__img
+
+	&__img {
+		width: 59px;
+		height: 58px;
+		flex-shrink: 0;
+		border-radius: 59px;
+		background: url(<path-to-image>),
+			lightgray -32.841px -1.06px / 188.2% 125.529% no-repeat;
+	}
+
+	// .slide-content__name
+
+	// .slide-content__name-name
+
+	&__name-name {
+		margin: 0px 0px 5px 0px;
+		color: #000;
+		font-family: Roboto;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: normal;
+	}
+
+	// .slide-content__work
+
+	&__work {
+		color: #000;
+		font-family: Roboto;
+		font-size: 12px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: normal;
+		opacity: 0.7;
+	}
+
+	// .slide-content__text
+
+	&__text {
+		max-width: 322px;
+		color: #000;
+		font-family: Roboto;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 24px; /* 150% */
+		opacity: 0.7;
+	}
+}

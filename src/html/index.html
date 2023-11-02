@@ -6,7 +6,7 @@ title: Polar
 	@@include('blocks/header.html')
 	<main class="main">
 		<div class="main__container">
-			<div class="main__block-1 block-1">
+			<div id="num-1" class="main__block-1 block-1">
 				<div class="block-1__row">
 					<div class="block-1__ice">
 						<div class="block-1__subtitle">Sweet fun, full of milk.</div>
@@ -23,7 +23,7 @@ title: Polar
 					<img class="block-1__img" src="../img/block-1.jpg" alt="" />
 				</div>
 			</div>
-			<div class="main__block-2 block-2">
+			<div id="num-2" class="main__block-2 block-2">
 				<div class="block-2__row">
 					<div class="block-2__cards">
 						<img class="block-2__icon" src="../img/Icon_1.svg" alt="" />
@@ -55,7 +55,7 @@ title: Polar
 					</div>
 				</div>
 			</div>
-			<div class="main__block-3 block-3">
+			<div id="num-3" class="main__block-3 block-3">
 				<div class="block-3__row">
 					<div class="block-3__broun">
 						<div class="block-3__title">Brown Sugar Oatmea</div>
@@ -69,7 +69,7 @@ title: Polar
 					<img src="../img/block-3.jpg" alt="" class="block-3__img" />
 				</div>
 			</div>
-			<div class="main__block-4 block-4">
+			<div id="num-4" class="main__block-4 block-4">
 				<div class="block-4__title">Our Product</div>
 				<div class="block-4__nav">
 					<ul class="block-4__list">
@@ -123,16 +123,53 @@ title: Polar
 					</div>
 					<div class="block-4__card-row cards-row cards-row-revers">
 						<img src="../img/block-4_4.jpg" alt="" class="cards-row__img" />
-						<div class="cards-row__card product">
-							<div class="product__avtor"></div>
-							<div class="product__text">
-								Thanks a lot for the prompt service. Really appreciate.
-								Excellence taste in Every Bite.Add a joy of best Taste. Foodie
-								Moments.
-							</div>
-							<div class="product__slider"></div>
+						<div class="cards-row__card sliders">
+							@@include('blocks/slider.html')
 						</div>
 					</div>
+				</div>
+			</div>
+			<div class="main__block-5 block-5">
+				<div class="block-5__row">
+					<div class="block-5__img">
+						<img src="../img/block-5.jpg" alt="" />
+					</div>
+					<div class="block-5__app-row app-row">
+						<div class="app__title">Simple Way To Order Your Food</div>
+						<div class="app__text">
+							Some food has looked so awful that it's looked like something that
+							the dog's brought home, yet after one mouthful I've been left
+							eating my thoughts.
+						</div>
+						<ul class="app__list">
+							<li class="app__icon-1">Select Your Food</li>
+							<li class="app__icon-2">Add To Cart</li>
+							<li class="app__icon-3">Order Your Food</li>
+						</ul>
+						<div class="app__buttons">
+							<a class="app__google" href=" "
+								><img src="../img/block-5_google.png" alt="" /></a
+							><a class="app-store" href=" "
+								><img src="../img/block-5__app.png" alt=""
+							/></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="num-5" class="main__block-6 block-6">
+				<div class="block-6__row">
+					<div class="block-6__title">
+						Have Question in Mind?<br />
+						Let us help you
+					</div>
+					<form class="block-6__form" method="get">
+						<input
+							class="block-6__text"
+							type="text"
+							placeholder="Enter your question"
+						/>
+						<button class="block-6__button" type="submit">Send</button>
+					</form>
 				</div>
 			</div>
 		</div>
