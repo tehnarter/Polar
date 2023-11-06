@@ -29,3 +29,22 @@ mainBtn.addEventListener('click', function () {
 		behavior: 'smooth',
 	})
 })
+//  Анімація для блоків при прогортуванні в низ
+
+const animatedBlocks = document.querySelectorAll('.scroll-animated')
+
+function checkAnimation() {
+	animatedBlocks.forEach(block => {
+		const blockTop = block.getBoundingClientRect().top
+		const blockBottom = block.getBoundingClientRect().bottom
+
+		if (blockTop < window.innerHeight && blockBottom > 0) {
+			block.classList.add('animate')
+		}
+	})
+}
+
+window.addEventListener('scroll', checkAnimation)
+window.addEventListener('load', checkAnimation) // Запустити перевірку анімації при завантаженні сторінки
+
+checkAnimation() // Запустити перевірку анімації на початку

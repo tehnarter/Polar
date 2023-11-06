@@ -1,8 +1,18 @@
 <header class="header">
 	<div class="header__container">
 		<div class="header__row">
-			<img src="../img/logo.png" alt="" class="logo" />
+			<a href="/">
+				<img src="../img/logo.png" alt="" class="logo" />
+			</a>
 			@@include('nav.html') @@include('burger.html')
+
+			<img
+				id="dark"
+				class="day-night day-mode"
+				src="../../img/day-night.png"
+				alt="day-night"
+			/>
+
 			@@include('button.html',{"name": "Buy Now"})
 		</div>
 	</div>

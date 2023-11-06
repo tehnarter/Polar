@@ -23,7 +23,11 @@ title: Polar
 					<img class="block-1__img" src="../img/block-1.jpg" alt="" />
 				</div>
 			</div>
-			<div id="num-2" class="main__block-2 block-2">
+			<div
+				id="num-2"
+				data-da=".main__container,767.98"
+				class="main__block-2 block-2"
+			>
 				<div class="block-2__row">
 					<div class="block-2__cards">
 						<img class="block-2__icon" src="../img/Icon_1.svg" alt="" />
@@ -57,7 +61,7 @@ title: Polar
 			</div>
 			<div id="num-3" class="main__block-3 block-3">
 				<div class="block-3__row">
-					<div class="block-3__broun">
+					<div class="block-3__broun scroll-animated block-3__animated">
 						<div class="block-3__title">Brown Sugar Oatmea</div>
 						<div class="block-3__text">
 							Together with McDonald’s, Burger King has grown to become
@@ -66,24 +70,36 @@ title: Polar
 						</div>
 						@@include('blocks/button.html',{"name": "See Details"})
 					</div>
-					<img src="../img/block-3.jpg" alt="" class="block-3__img" />
+					<img
+						class="block-3__img scroll-animated img-block-3__animated"
+						src="../img/block-3.jpg"
+						alt=""
+					/>
 				</div>
 			</div>
 			<div id="num-4" class="main__block-4 block-4">
 				<div class="block-4__title">Our Product</div>
 				<div class="block-4__nav">
 					<ul class="block-4__list">
-						<li><a href="#"></a>ICE CREAM</li>
-						<li><a href="#"></a>CAYENNE CHOCOLATE</li>
-						<li><a href="#"></a>CAKE BATTER</li>
-						<li><a href="#"></a>CANDY CANE</li>
-						<li><a href="#"></a>PLATTERS</li>
-						<li><a href="#"></a>DESSERT</li>
+						<li data-goto="num-6" class="scroll"><a href="#"></a>ICE CREAM</li>
+						<li data-goto="num-7" class="scroll">
+							<a href="#"></a>CAYENNE CHOCOLATE
+						</li>
+						<li data-goto="num-8" class="scroll">
+							<a href="#"></a>CAKE BATTER
+						</li>
+						<li data-goto="num-9" class="scroll"><a href="#"></a>CANDY CANE</li>
+						<li data-goto="num-10" class="scroll"><a href="#"></a>PLATTERS</li>
+						<li data-goto="num-11" class="scroll"><a href="#"></a>DESSERT</li>
 					</ul>
 				</div>
 				<div class="block-4__row">
-					<div class="block-4__card-row cards-row">
-						<img src="../img/block-4_1.jpg" alt="" class="cards-row__img" />
+					<div id="num-6" class="block-4__card-row cards-row">
+						<img
+							class="cards-row__img scroll-animated rev-img-block-4__animated"
+							src="../img/block-4_1.jpg"
+							alt=""
+						/>
 						<div class="cards-row__card product">
 							<div class="product__title">Brown bread</div>
 							<div class="product__text">
@@ -95,8 +111,12 @@ title: Polar
 							@@include('blocks/button.html',{"name": "Buy Now"})
 						</div>
 					</div>
-					<div class="block-4__card-row cards-row cards-row-revers">
-						<img src="../img/block-4_2.jpg" alt="" class="cards-row__img" />
+					<div id="num-7" class="block-4__card-row cards-row cards-row-revers">
+						<img
+							class="cards-row__img scroll-animated img-block-4__animated"
+							src="../img/block-4_2.jpg"
+							alt=""
+						/>
 						<div class="cards-row__card product">
 							<div class="product__title">Cayenne chocolate</div>
 							<div class="product__text">
@@ -108,8 +128,12 @@ title: Polar
 							@@include('blocks/button.html',{"name": "Buy Now"})
 						</div>
 					</div>
-					<div class="block-4__card-row cards-row">
-						<img src="../img/block-4_3.jpg" alt="" class="cards-row__img" />
+					<div id="num-8" class="block-4__card-row cards-row">
+						<img
+							class="cards-row__img scroll-animated rev-img-block-4__animated"
+							src="../img/block-4_3.jpg"
+							alt=""
+						/>
 						<div class="cards-row__card product">
 							<div class="product__title">Sweet corn</div>
 							<div class="product__text">
@@ -121,8 +145,12 @@ title: Polar
 							@@include('blocks/button.html',{"name": "Buy Now"})
 						</div>
 					</div>
-					<div class="block-4__card-row cards-row cards-row-revers">
-						<img src="../img/block-4_4.jpg" alt="" class="cards-row__img" />
+					<div id="num-9" class="block-4__card-row cards-row cards-row-revers">
+						<img
+							class="cards-row__img scroll-animated img-block-4__animated block-4__img-none"
+							src="../img/block-4_4.jpg"
+							alt=""
+						/>
 						<div class="cards-row__card sliders">
 							@@include('blocks/slider.html')
 						</div>

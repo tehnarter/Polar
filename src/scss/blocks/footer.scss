@@ -1,5 +1,6 @@
 .footer {
-	padding: 70px 0px 114px 0px;
+	@include adaptiveValue('padding-top', 70, 20);
+	@include adaptiveValue('padding-bottom', 114, 20);
 	background-color: #0a0808;
 	// .footer__container
 
@@ -12,6 +13,13 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		@media (max-width: $tablet) {
+			flex-direction: column;
+			flex-wrap: wrap;
+			align-content: center;
+			align-items: flex-start;
+			row-gap: 5px;
+		}
 	}
 
 	// .footer__ftr-1
@@ -48,6 +56,7 @@
 	// .ftr-1__text
 
 	&__text {
+		max-width: 207px;
 		margin: 0px 0px 25px 0px;
 		color: #fff;
 		font-family: Roboto;
