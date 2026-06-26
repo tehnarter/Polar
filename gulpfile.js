@@ -8,17 +8,9 @@ gulp.task(
 	'default',
 	gulp.series(
 		'clean:dev',
-		gulp.parallel(
-			'html:dev',
-			'sass:dev',
-			'ttfToWoff:dev',
-			'ttfToWoff2:dev',
-			'images:dev',
-			'files:dev',
-			'js:dev'
-		),
-		gulp.parallel('browser-sync:dev', 'watch:dev')
-	)
+		gulp.parallel('html:dev', 'sass:dev', 'images:dev', 'files:dev', 'js:dev'),
+		gulp.parallel('browser-sync:dev', 'watch:dev'),
+	),
 )
 
 gulp.task(
@@ -32,8 +24,8 @@ gulp.task(
 			'ttfToWoff:build',
 			'ttfToWoff2:build',
 			'files:build',
-			'js:build'
+			'js:build',
 		),
-		gulp.parallel('browser-sync:build')
-	)
+		gulp.parallel('browser-sync:build'),
+	),
 )

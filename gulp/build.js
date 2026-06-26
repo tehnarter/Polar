@@ -22,10 +22,10 @@ const notify = require('gulp-notify')
 const webpack = require('webpack-stream')
 const babel = require('gulp-babel')
 const changed = require('gulp-changed')
-const ttf2woff = require('gulp-ttf2woff')
+const ttf2woff = require('gulp-ttf2woff').default
 const ttf2woff2 = require('gulp-ttf2woff2')
+
 // Images
-const imagemin = require('gulp-imagemin')
 const webp = require('gulp-webp')
 
 gulp.task('clean:build', function (done) {
@@ -49,12 +49,13 @@ const plumberNotify = title => {
 		}),
 	}
 }
+
 const setPanini = {
-	root: 'src/html/',
 	layouts: 'src/html/layouts',
-	partials: 'src/html/blocks',
-	data: 'src/html/data',
+	partials: 'src/html/blocks/*.html',
+	data: 'src/html/data/*.{json,yml}',
 }
+
 gulp.task('html:build', function () {
 	return (
 		gulp
@@ -88,7 +89,10 @@ gulp.task('sass:build', function () {
 			.pipe(gulp.dest('./build/css/'))
 	)
 })
-gulp.task('images:build', function () {
+
+gulp.task('images:build', async function () {
+	const { default: imagemin } = await import('gulp-imagemin')
+
 	return gulp
 		.src('./src/img/**/*')
 		.pipe(changed('./build/img/'))
@@ -103,7 +107,20 @@ gulp.task('images:build', function () {
 gulp.task('ttfToWoff:build', function () {
 	return gulp
 		.src('src/fonts/*.ttf')
-		.pipe(ttf2woff())
+		.pipe(
+			require('through2').obj(function (file, enc, cb) {
+				try {
+					const result = ttf2woff(file.contents)
+
+					file.contents = Buffer.from(result)
+					file.extname = '.woff'
+
+					cb(null, file)
+				} catch (error) {
+					cb(error)
+				}
+			}),
+		)
 		.pipe(gulp.dest('./build/fonts'))
 })
 
@@ -113,6 +130,7 @@ gulp.task('ttfToWoff2:build', function () {
 		.pipe(ttf2woff2())
 		.pipe(gulp.dest('./build/fonts'))
 })
+
 gulp.task('files:build', function () {
 	return gulp
 		.src('./src/files/**/*')

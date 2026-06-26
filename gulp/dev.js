@@ -11,8 +11,9 @@ const plumber = require('gulp-plumber')
 const notify = require('gulp-notify')
 const webpack = require('webpack-stream')
 const changed = require('gulp-changed')
-const ttf2woff = require('gulp-ttf2woff')
+const ttf2woff = require('gulp-ttf2woff').default
 const ttf2woff2 = require('gulp-ttf2woff2')
+
 gulp.task('clean:dev', function (done) {
 	if (fs.existsSync('./dev/')) {
 		return gulp.src('./dev/', { read: false }).pipe(clean({ force: true }))
@@ -35,14 +36,12 @@ const plumberNotify = title => {
 	}
 }
 const setPanini = {
-	root: 'src/html/',
 	layouts: 'src/html/layouts',
-	partials: 'src/html/blocks',
-	data: 'src/html/data',
+	partials: 'src/html/blocks/*.html',
+	data: 'src/html/data/*.{json,yml}',
 }
 
 gulp.task('html:dev', function () {
-	panini.refresh()
 	return gulp
 		.src([
 			'./src/html/**/*.html',
@@ -72,26 +71,44 @@ gulp.task('sass:dev', function () {
 
 gulp.task('images:dev', function () {
 	return gulp
-		.src('./src/img/**/*')
-		.pipe(changed('./dev/img/'))
+		.src('./src/img/**/*', {
+			encoding: false,
+			buffer: true,
+		})
 		.pipe(gulp.dest('./dev/img/'))
 		.pipe(browserSync.stream())
 })
 
 gulp.task('ttfToWoff:dev', function () {
-	return gulp
-		.src('src/fonts/*.ttf')
-		.pipe(ttf2woff())
-		.pipe(gulp.dest('./dev/fonts'))
-		.pipe(browserSync.stream())
+	const fonts = [
+		'Fredoka-Regular.ttf',
+		'HindMadurai-Bold.ttf',
+		'HindMadurai-Medium.ttf',
+		'HindMadurai-Regular.ttf',
+		'HindMadurai-SemiBold.ttf',
+		'Roboto-Bold.ttf',
+		'Roboto-Medium.ttf',
+		'Roboto-Regular.ttf',
+	]
+
+	return gulp.series(
+		...fonts.map(
+			font =>
+				function () {
+					return gulp
+						.src(`src/fonts/${font}`)
+						.pipe(ttf2woff())
+						.pipe(gulp.dest('./dev/fonts'))
+				},
+		),
+	)()
 })
 
 gulp.task('ttfToWoff2:dev', function () {
 	return gulp
-		.src('src/fonts/*.ttf')
+		.src('src/fonts/*.ttf', { buffer: true })
 		.pipe(ttf2woff2())
 		.pipe(gulp.dest('./dev/fonts'))
-		.pipe(browserSync.stream())
 })
 
 gulp.task('files:dev', function () {
@@ -119,6 +136,7 @@ gulp.task('browser-sync:dev', function () {
 		},
 	})
 })
+
 gulp.task('watch:dev', function () {
 	gulp.watch('./src/scss/**/*.scss', gulp.parallel('sass:dev'))
 	gulp.watch('./src/html/**/*.html', gulp.parallel('html:dev'))
